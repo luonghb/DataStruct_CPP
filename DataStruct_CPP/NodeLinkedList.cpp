@@ -2,6 +2,7 @@
 
 template<class T>
 NodeLinkedList<T>::NodeLinkedList() {
+	data_ = T();
 	p_next_ = nullptr;
 }
 
@@ -27,12 +28,7 @@ void NodeLinkedList<T>::Clear() {
 
 template<class T>
 void NodeLinkedList<T>::set_p_next(NodeLinkedList<T>* new_p_next) {
-	if (new_p_next != nullptr) {
-		p_next_ = new_p_next;
-	}
-	else {
-		Clear();
-	}
+	p_next_ = new_p_next;
 }
 
 template<class T>

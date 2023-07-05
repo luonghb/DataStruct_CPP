@@ -30,12 +30,7 @@ inline void SmartPointer<T>::Clear()
 template<class T>
 inline void SmartPointer<T>::set_p(T* new_p)
 {
-	if (new_p != nullptr) {
-		p_ = new_p;
-	}
-	else {
-		Clear();
-	}
+	p_ = new_p;
 }
 
 template<class T>
@@ -44,4 +39,16 @@ inline T* SmartPointer<T>::get_p() const
 	return p_;
 }
 
-template class SmartPointer<int*>;
+template<class T>
+T& SmartPointer<T>::operator*()
+{
+	return *p_;
+}
+
+template<class T>
+T* SmartPointer<T>::operator->()
+{
+	return p_;
+}
+
+template class SmartPointer<int>;

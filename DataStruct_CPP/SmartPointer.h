@@ -13,6 +13,9 @@ class SmartPointer
 		void set_p(T *new_p);
 		T* get_p() const;
 
+		T& operator*();
+		T* operator->();
+
 	private:
 		T *p_;
 };
