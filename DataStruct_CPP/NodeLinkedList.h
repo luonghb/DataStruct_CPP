@@ -15,6 +15,7 @@ class NodeLinkedList
 		void set_data(T new_data);
 		T get_data() const;
 
+
 	private:
 		T data_;
 		NodeLinkedList<T>* p_next_;
