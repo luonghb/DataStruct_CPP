@@ -4,19 +4,12 @@ class NodeLinkedList
 {
 	public:
 		explicit NodeLinkedList();
-		explicit NodeLinkedList(T new_data);
+		explicit NodeLinkedList(T newData);
+		explicit NodeLinkedList(T newData, NodeLinkedList<T>* newPNext);
 		~NodeLinkedList();
 
-		void Clear();
-
-		void set_p_next(NodeLinkedList<T>* new_p_next);
-		NodeLinkedList<T>* get_p_next() const;
-
-		void set_data(T new_data);
-		T get_data() const;
-
-
-	private:
-		T data_;
-		NodeLinkedList<T>* p_next_;
+		void DeletePNext();
+		
+		T data;
+		NodeLinkedList<T>* pNext;
 };
