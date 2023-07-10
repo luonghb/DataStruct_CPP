@@ -1,37 +1,24 @@
 #include "NodeLinkedList.h"
 
-template<class T>
-NodeLinkedList<T>::NodeLinkedList() {
+template <class T>
+NodeLinkedList<T>::NodeLinkedList()
+{
 	data = T();
 	pNext = nullptr;
 }
 
 template<class T>
-NodeLinkedList<T>::NodeLinkedList(T newData) {
-	data = newData;
+NodeLinkedList<T>::NodeLinkedList(T initData)
+{
+	data = initData;
 	pNext = nullptr;
 }
 
 template<class T>
-NodeLinkedList<T>::NodeLinkedList(T newData, NodeLinkedList<T>* newPNext)
+NodeLinkedList<T>::NodeLinkedList(T initData, NodeLinkedList<T>* initPNext)
 {
-	data = newData;
-	pNext = newPNext;
-}
-
-template<class T>
-NodeLinkedList<T>::~NodeLinkedList()
-{
-	DeletePNext();
-}
-
-template<class T>
-void NodeLinkedList<T>::DeletePNext()
-{
-	if (pNext != nullptr) {
-		delete pNext;
-		pNext = nullptr;
-	}
+	data = initData;
+	pNext = initPNext;
 }
 
 template class NodeLinkedList<int>;

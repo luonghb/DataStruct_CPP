@@ -1,26 +1,34 @@
 #pragma once
 
+#include <iostream>
 #include "NodeLinkedList.h"
 
-template<class T>
+template <class T>
 class LinkedList
 {
-	public:
-		explicit LinkedList();
-		~LinkedList();
+public:
+	explicit LinkedList();
+	explicit LinkedList(const LinkedList& list);
+	~LinkedList();
 
-		bool IsEmpty();
-		void MakeEmpty();
+	NodeLinkedList<T>* Zeroth();
+	NodeLinkedList<T>* First();
+	const NodeLinkedList<T>* First() const;
 
-		NodeLinkedList<T>* Zeroth();
-		NodeLinkedList<T>* First();
+	bool IsEmpty() const;
 
-		void Insert(T newData, NodeLinkedList<T>* p) {
+	NodeLinkedList<T>* Find(T data);
+	NodeLinkedList<T>* FindPrevious(T data);
 
-		}
+	void Insert(T data, NodeLinkedList<T>* p);
+	void Remove(T data);
 
-		void Remove(T data);
+	void MakeEmpty();
 
-	private:
-		NodeLinkedList<T>* dummyHead;
+	void Print() const;
+
+	LinkedList<T>& operator=(const LinkedList<T>& rhs);
+private:
+	NodeLinkedList<T>* dummyHead;
 };
+
