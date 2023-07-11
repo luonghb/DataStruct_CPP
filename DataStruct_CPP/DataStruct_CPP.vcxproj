@@ -158,10 +158,16 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NodeLinkedList.cpp" />
+    <ClCompile Include="NodeStack.cpp" />
+    <ClCompile Include="StackLinkedList.cpp" />
+    <ClCompile Include="StackArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="NodeLinkedList.h" />
+    <ClInclude Include="NodeStack.h" />
+    <ClInclude Include="StackArray.h" />
+    <ClInclude Include="StackLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
